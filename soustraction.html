@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Math Addition Game</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+  
+  <style>
+    body {
+  background-color: #f3f3f3;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+#question {
+  font-size: 36px;
+  margin-top: 50px;
+}
+
+form {
+  margin-top: 20px;
+}
+
+#answer {
+  font-size: 24px;
+  padding: 10px;
+  width: 200px;
+}
+
+button {
+  font-size: 24px;
+  padding: 10px;
+  margin-left: 10px;
+}
+
+#result {
+  font-size: 36px;
+  margin-top: 20px;
+}
+
+  </style>
+  
+  <script>
+    
+    // Generate a random addition problem
+
+  </script>
+</head>
+<body>
+  <h1>Jeux de soustraction</h1>
+  
+    <button onclick="help()"> Consigne</button>
+    <div id="help">
+    </div>
+  <div id="question"></div>
+  <form>
+    <input type="text" id="answer" placeholder="Enter your answer">
+    <button type="button" onclick="checkAnswer()">Répondre</button>
+  </form>
+  <div id="result"></div>
+  <script src="substractionscript.js"></script>
+</body>
+</html>

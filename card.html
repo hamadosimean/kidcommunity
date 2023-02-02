@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+
+  <style>
+    .game-container {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .card {
+      width: 150px;
+      height: 150px;
+      background-color: #ccc;
+    }
+  </style>
+
+  <script>
+    let cards = document.querySelectorAll(".card");
+    let flippedCards = ['197560.png'];
+    let lockBoard = false;
+
+    function flipCard() {
+      if (lockBoard) return;
+      if (this === flippedCards[0]) return;
+
+      this.classList.add("flip");
+
+      if (flippedCards.length === 0) {
+        flippedCards[0] = this;
+        return;
+      } else {
+        flippedCards[1] = this;
+        checkForMatch();
+      }
+    }
+
+    function checkForMatch() {
+      let isMatch = flippedCards[0].dataset.cardValue === flippedCards[1].dataset.cardValue;
+      isMatch ? disableCards() : unflipCards();
+    }
+
+    function disableCards() {
+      flippedCards[0].removeEventListener("click", flipCard);
+      flippedCards[1].removeEventListener("click", flipCard);
+      resetBoard();
+    }
+
+    function unflipCards() {
+      lockBoard = true;
+      setTimeout(() => {
+        flippedCards[0].classList.remove("flip");
+        flippedCards[1].classList.remove("flip");
+        resetBoard();
+      }, 1500);
+    }
+
+    function resetBoard() {
+      flippedCards = [];
+      lockBoard = false;
+    }
+
+    cards.forEach((card) => card.addEventListener("click", flipCard));
+  </script>
+</head>
+
+<body>
+
+  <div class="game-container">
+    <div class="card" data-card-value="lion"></div>
+    <div class="card" data-card-value="tiger"></div>
+    <div class="card" data-card-value="bear"></div>
+    <div class="card" data-card-value="lion"></div>
+    <div class="card" data-card-value="tiger"></div>
+    <div class="card" data-card-value="bear"></div>
+  </div>
+</body>
+
+</html>

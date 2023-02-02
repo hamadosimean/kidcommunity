@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Children's Learning Platform</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .header {
+      text-align: center;
+      padding: 1em;
+    }
+
+    .header p {
+      font-size: 12px;
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      animation: rotate 1.5s linear infinite;
+
+    }
+
+    #logo {
+      width: 100px;
+      display: block;
+      margin: 0 auto;
+    }
+
+    .banner {
+      text-align: center;
+    }
+
+    .banner img {
+      width: 100%;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .card {
+      width: 300px;
+      margin: 1em;
+      padding: 1em;
+      text-align: center;
+      background-color: #f2f2f2;
+    }
+
+    h2 {
+      margin-top: 0;
+    }
+
+    img {
+      width: 50%;
+      margin-bottom: 1em;
+    }
+
+    span {
+      font-size: 20px;
+      font-weight: bolder;
+      animation: rotate 1.5s linear infinite;
+    }
+
+    @keyframes rotate {
+      0% {
+        filter: hue-rotate(0deg);
+      }
+
+      100% {
+        filter: hue-rotate(360deg);
+      }
+    }
+
+    a {
+      display: block;
+      margin-top: 1em;
+      font-weight: bold;
+      color: #4CAF50;
+      text-decoration: none;
+    }
+
+
+    .dropdown {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      display: inline-block;
+      border-bottom-right-radius: 5px;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: white;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+    }
+
+    .dropdown-content a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #f1f1f1
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .dropbtn {
+      background-color: white;
+      font-weight: bolder;
+      color: #3e8e41;
+      padding: 16px;
+      font-size: 16px;
+      border: none;
+    }
+
+    .dropdown:hover .dropbtn {
+      background-color: white;
+    }
+
+
+    footer {
+      background-color: #f5f5f5;
+      padding: 50px 5%;
+    }
+
+    footer h4 {
+      font-size: 16px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    footer p {
+      font-size: 14px;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    footer .social-links a {
+      font-size: 18px;
+      margin-right: 10px;
+      color: #333;
+    }
+
+    footer .copyright {
+      font-size: 14px;
+      text-align: center;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+
+<body>
+
+
+
+
+
+
+
+  <div class="header">
+
+    <div class="dropdown">
+      <button class="dropbtn">Menu</button>
+      <div class="dropdown-content">
+        <a href="math.html">Mathématiques</a>
+        <a href="reading.html">Lecture</a>
+        <a href="mathgame1.html">Jeux</a>
+
+        <a href="https://hamadosimean.github.io/simean/about.html">About</a>
+
+      </div>
+    </div>
+
+    <img src="2219867.png" alt="Logo" id="logo">
+
+    <span>Kids Community</span>
+    <p> La communauté des enfants</p>
+  </div>
+  <div class="banner">
+    <img src="banner.png" alt="Banner Image">
+  </div>
+  <div class="container">
+    <div class="card">
+      <h2>Math</h2>
+      <img src="2995439.png" alt="Math">
+      <p>Apprend et pratique les concepts des mathématiques avec des jeux interactifs et les activités.</p>
+      <a href="math.html">Commencer</a>
+    </div>
+    <!--  <div class="card">
+        <h2>Science</h2>
+        <img src="science.jpg" alt="Science">
+        <p>Explore le monde de la science avec des expériences interactives et des activités the world of science.</p>
+        <a href="science.html">Commencer</a>
+      </div>-->
+    <div class="card">
+      <h2>Lecture</h2>
+      <img src="2232688.png" alt="Reading">
+      <p>Améliore ta compréhension de lecture et vocabulaires avec des histoires interactives et poèmes.</p>
+      <a href="reading.html">Commencer</a>
+    </div>
+    <!-- <div class="card">
+        <h2>Programmation</h2>
+        <img src="programming.jpg" alt="Programming">
+        <p>Apprendre les bases de la programmation à travers des tutoriels et excercises .</p>
+        <a href="programming.html">Commencer</a>
+      </div>-->
+  </div>
+
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <h4>À propos de nous</h4>
+          <p>Nous sommes un site web communautaire dédié à fournir des contenus amusants et éducatifs pour les enfants âgés de 12 ans et moins. Notre mission est d'aider les enfants à apprendre et à grandir dans un environnement sûr et engageant.</p>
+        </div>
+        <!--<div class="col-md-4">
+        <h4>Contactez-nous</h4>
+        <p>Email: info@kidcomminuty.com <br> Téléphone: 555-555-5555</p>
+        <div class="social-links">
+          <a href="#">Facebook</a>
+          <a href="#">Twitter</a>
+          <a href="#">Instagram</a>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <h4>Newsletter</h4>
+        <form action="" method="post">
+          <div class="form-group">
+            <input type="email" placeholder="Entrez votre adresse e-mail">
+            <button type="submit">S'abonner</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">-->
+        <p class="copyright">Copyright &copy; 2023 Kidcomminuty. Tous droits réservés.</p>
+      </div>
+    </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>
