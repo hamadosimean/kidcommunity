@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Kid's Game Central</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style type="text/css">
+   /* Default styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2 {
+  text-align: center;
+}
+
+nav {
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  display: inline-block;
+}
+
+nav li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #4CAF50;
+}
+
+#game-descriptions {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+}
+
+.game-description {
+  width: 300px;
+      margin: 1em;
+      padding: 1em;
+      text-align: center;
+      background-color: #f2f2f2;
+}
+
+.game-description a {
+  display: block;
+  margin: 20px 0;
+  background-color:#4CAF50;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px;
+}
+
+.game-description  img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 100px;
+    }
+/*/* Media Queries */
+/*@media (max-width: 768px) {
+  .game-description {
+    width: 100%;
+  }
+}*/
+
+@media (max-width: 480px) {
+  nav {
+    display: none;
+  }
+}
+.header {
+      text-align: center;
+      background-color: #4CAF50;
+    }
+
+    #logo {
+      width: 150px;
+      display: block;
+      margin: 0 auto;
+    }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <img src="mole-game.png" alt="Logo" id="logo">
+
+    <h1>Jeux pour enfants</h1>
+    </div>
+    
+    <nav>
+        <ul>
+            <li><a href="#game1">Jeux de vocabulaire</a></li>
+            <li><a href="#game2">Jeux de couleur</a></li>
+            <li><a href="#game3">Jeux mot</a></li>
+            <li><a href="#game3">Jeux mot</a></li>
+        </ul>
+    </nav>
+      <div class="game-descriptions">
+      <div id="game1" class="game-description">
+        <h2>Jeux de vocabulaire</h2>
+        <img src="cubes.png" alt="Game 1 Screenshot">
+        <p>Jeux de vocabulaire est un jeux intérresant, qui est designé pour apprendre aux enfants les objets et les noms</p>
+        <a href="vocabularygame.html">Commencer à jouer</a>
+      </div>
+      <div id="game2" class="game-description">
+        <h2>Jeux de couleur</h2>
+        <img src="child-game.png" alt="Game 2 Screenshot">
+        <p>Jeux de couleur est un jeu designé pour apprendre aux enfants les differentes couleurs</p>
+        <a href="colorgame.html">Commencer à jouer</a>
+      </div>
+      <div id="game3" class="game-description">
+        <h2>Jeux de mot</h2>
+        <img src="puzzle.png" alt="Game 3 Screenshot">
+        <p>Jeux de mot est un jeux très intérresant qui apprend aux enfants comment assembler les lettres alphabetiques pour former les mots.</p>
+        <a href="scramblegame.html">Commencer à jouer</a>
+      </div>
+
+       <div id="game4" class="game-description">
+        <h2>Jeux de devinette</h2>
+        <img src="speech-bubble.png" alt="Game 1 Screenshot">
+        <p>Jeux de devinette est désigner pour aider les enfants à se former en matière de devinette</p>
+        <a href="guessinggame.html">Commencer à jouer</a>
+      </div>
+    </div>
+  </body>
+</html>

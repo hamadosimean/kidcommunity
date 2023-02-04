@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <style>
+
+      body{
+        background-color: lightgray;
+      }
+
+      input{
+          font-size: 1.5em;
+          margin: 10px;
+          padding: 5px;
+      }
+
+      button{
+        font-size: 1.5em;
+        padding: 5px;
+      }
+      #container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 50vh;
+      }
+      #message {
+        font-size: 20px;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+       <button onclick="help()"> Consigne</button>
+    <div id="help"> </div>
+        <input id="input" type="number">
+      <button id="submit">Vérifier</button>
+      <div id="message">Devine un nombre entre 1 et 20</div>
+
+    </div>
+  </body>
+  <script>
+    const target = Math.floor(Math.random() * 20) + 1;
+    const input = document.getElementById("input");
+    const message = document.getElementById("message");
+    document.getElementById("submit").addEventListener("click", function () {
+      if (input.value == target) {
+        message.innerHTML = "Bravo, vous avez gagner! Rafraichir la page et jouer encore.";
+      } else if (input.value < target) {
+        message.innerHTML = "Nombre trop petit! Essayez à nouveau.";
+      } else {
+        message.innerHTML = "Nombre trop grand! Essayez à nouveau.";
+      }
+    });
+    function help(){
+  
+  document.getElementById('help').innerHTML="<strong>Rafraichir la page  à chaque fois pour avoir un nouveau jeu </strong>";
+    document.getElementById('help').style.color='red';
+
+}
+
+  </script>
+</html>

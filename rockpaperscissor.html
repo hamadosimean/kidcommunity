@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Rock, Paper, Scissors</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <style>
+      body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: #f2f2f2;
+}
+
+button {
+  padding: 10px 20px;
+  margin: 20px;
+  font-size: 20px;
+}
+
+h1,p{
+  color: #4CAF50;
+  font-weight: bold;
+}
+
+    </style>
+  </head>
+  <body>
+    <h1>Pierre, Pappier, Ciseaux</h1>
+    <p>Devine un mot:</p>
+    <button onclick="help()"> Consigne</button>
+    <div id="help"> </div>
+    
+    <button id="rock">Pierre</button>
+    <button id="paper">Pappier</button>
+    <button id="scissors">Ciseaux</button>
+    <p id="result"></p>
+    <script>
+      // JavaScript code goes here
+      // Get references to the buttons
+const rockButton = document.getElementById("rock");
+const paperButton = document.getElementById("paper");
+const scissorsButton = document.getElementById("scissors");
+const resultDisplay = document.getElementById("result");
+
+// Handle the button clicks
+rockButton.addEventListener("click", function() {
+  play("rock");
+});
+
+paperButton.addEventListener("click", function() {
+  play("paper");
+});
+
+scissorsButton.addEventListener("click", function() {
+  play("scissors");
+});
+
+function play(playerChoice) {
+  // Generate a random number for the computer's choice
+  const computerChoice = Math.random();
+  let choice;
+
+  if (computerChoice < 0.34) {
+    choice = "rock";
+  } else if (computerChoice <= 0.67) {
+    choice = "paper";
+  } else {
+    choice = "scissors";
+  }
+
+  // Determine the winner
+  if (choice === playerChoice) {
+    resultDisplay.innerHTML = "No no no no!";
+  } else if (choice === "rock" && playerChoice === "scissors") {
+    resultDisplay.innerHTML = "L'ordinateur a gagné pierre!";
+  } else if (choice === "paper" && playerChoice === "rock") {
+    resultDisplay.innerHTML = "L'ordinateur a gagné papier!";
+  } else if (choice === "scissors" && playerChoice === "paper") {
+    resultDisplay.innerHTML = "L'ordinateur a gagné cisseaux!";
+  } else {
+    resultDisplay.innerHTML = "Bravo tu as gagné " + playerChoice + "!";
+  }
+}
+function help(){
+  
+  document.getElementById('help').innerHTML="<strong>Rafraichir la page  à chaque fois pour avoir un nouveau jeu </strong>";
+    document.getElementById('help').style.color='red';
+
+}
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Jeu de mélange de mots</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta charset="utf-8">
+  <meta charset="utf-8">
+
+  <style type="text/css">
+    body {
+  text-align: center;
+  font-family: Arial, sans-serif;
+  background-color: #f3f3f3;
+}
+
+h1 {
+  color: blue;
+}
+
+#scrambled-word {
+  font-size: 2em;
+  font-weight: bold;
+}
+
+#user-input {
+  font-size: 1.5em;
+  margin: 10px;
+  padding: 5px;
+}
+
+#check-button {
+  background-color: green;
+  color: white;
+  font-size: 1.5em;
+  padding: 5px;
+}
+
+#result {
+  font-size: 2em;
+}
+
+
+  </style>
+</head>
+<body>
+  <h1>Jeu de mélange de mots</h1>
+  <p id="instructions">Démêlez les lettres pour former un mot :</p>
+  <p id="scrambled-word"></p>
+  <input type="text" id="user-input">
+  <button id="check-button">Vérifier</button>
+  <p id="result"></p>
+  <script src="scramblegame.js"></script>
+</body>
+</html>
+

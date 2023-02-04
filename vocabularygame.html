@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Kids Game</title>
+  <style>
+    /* Some basic styling */
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+
+    h1 {
+      margin-top: 50px;
+    }
+
+    button {
+      font-weight: bold;
+      margin-right: 40px;
+      margin-left: 40px;
+      right: 60px;
+      width: 50%;
+      height: 50px;
+      z-index: 8;
+      top: 0px;
+      position: fixed;
+      background-color: #f2f2f2;
+    }
+
+    /* Styling the images */
+    img {
+      width: 70px;
+      margin: 10px;
+      cursor: pointer;
+    }
+
+    /* Styling the message */
+    #message {
+      font-size: 18px;
+      margin-top: 10px;
+      display: none;
+    }
+  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+</head>
+
+<body>
+
+  <button disabled>Réponse
+    <div id="message"></div>
+  </button>
+  <div class="container">
+    <section>
+      <h1>Cliquez sur les gens</h1>
+      <img src="2219867.png" onclick="checkAnswer(this)" data-correct="yes">
+      <img src="983534.png" onclick="checkAnswer(this)" data-correct="no">
+      <img src="2232688.png" onclick="checkAnswer(this)" data-correct="no">
+    </section>
+
+
+    <section>
+      <h1>Cliquez sur le lapin</h1>
+      <img src="2219867.png" onclick="checkAnswer(this)" data-correct="no">
+      <img src="4185015.png" onclick="checkAnswer(this)" data-correct="yes">
+
+      <img src="2232688.png" onclick="checkAnswer(this)" data-correct="no">
+    </section>
+
+    <section>
+      <h1>Cliquez sur les livres</h1>
+      <img src="2219867.png" onclick="checkAnswer(this)" data-correct="no">
+      <img src="983534.png" onclick="checkAnswer(this)" data-correct="no">
+      <img src="2232688.png" onclick="checkAnswer(this)" data-correct="yes">
+    </section>
+
+    <section>
+      <h1>Cliquez l'enfant sur vélo</h1>
+      <img src="983534.png" onclick="checkAnswer(this)" data-correct="yes">
+      <img src="le-petit-chaperon-rouge.png" onclick="checkAnswer(this)" data-correct="no">
+      <img src="4185015.png" onclick="checkAnswer(this)" data-correct="no">
+      <div id="message"></div>
+
+    </section>
+
+
+    <section>
+      <h1>Cliquez le lapin qui tient la carrotte</h1>
+      <img src="983534.png" onclick="checkAnswer(this)" data-correct="no">
+      <img src="4185015.png" onclick="checkAnswer(this)" data-correct="no">
+
+      <img src="9217840.png" onclick="checkAnswer(this)" data-correct="yes">
+
+
+      <div id="message"></div>
+
+    </section>
+
+    <section>
+      <h1>Cliquez sur l'arbre de Noël </h1>
+      <img src="983534.png" onclick="checkAnswer(this)" data-correct="no">
+      <img src="4185015.png" onclick="checkAnswer(this)" data-correct="no">
+
+      <img src="9036079.png" onclick="checkAnswer(this)" data-correct="yes">
+
+
+      <div id="message"></div>
+
+    </section>
+    <section>
+      <h1>Cliquez sur le dé </h1>
+      <img src="7603277.png" onclick="checkAnswer(this)" data-correct="yes">
+      <img src="4185015.png" onclick="checkAnswer(this)" data-correct="no">
+
+      <img src="9036079.png" onclick="checkAnswer(this)" data-correct="no">
+
+
+      <div id="message"></div>
+
+    </section>
+
+
+    <section>
+      <h1>Cliquez sur le piano</h1>
+      <img src="7603277.png" onclick="checkAnswer(this)" data-correct="no">
+      <img src="6239915.png" onclick="checkAnswer(this)" data-correct="no">
+
+      <img src="7186925.png" onclick="checkAnswer(this)" data-correct="yes">
+
+
+      <div id="message"></div>
+
+    </section>
+
+    <section>
+      <h1>Cliquez sur le Lion</h1>
+      <img src="7603277.png" onclick="checkAnswer(this)" data-correct="no">
+      <img src="6239915.png" onclick="checkAnswer(this)" data-correct="no">
+
+      <img src="6578851.png" onclick="checkAnswer(this)" data-correct="no">
+
+
+      <div id="message"></div>
+
+    </section>
+
+
+    <section>
+      <h1>Montrer la guitare</h1>
+      <img src="7154189.png" onclick="checkAnswer(this)" data-correct="yes">
+      <img src="7138235.png" onclick="checkAnswer(this)" data-correct="no">
+
+      <img src="8628038.png" onclick="checkAnswer(this)" data-correct="no">
+
+
+      <div id="message"></div>
+
+    </section>
+
+
+    <section>
+      <h1>Toucher l'ordinateur</h1>
+      <img src="2888407.png" onclick="checkAnswer(this)" data-correct="yes">
+      <img src="2926722.png" onclick="checkAnswer(this)" data-correct="no">
+
+      <img src="8628038.png" onclick="checkAnswer(this)" data-correct="no">
+
+      <div id="message"></div>
+
+    </section>
+
+    <section>
+      <h1>Toucher le chien</h1>
+      <img src="2926722.png" onclick="checkAnswer(this)" data-correct="yes">
+
+      <img src="2383125.png" onclick="checkAnswer(this)" data-correct="2926722.png">
+      <img src="2888407.png" onclick="checkAnswer(this)" data-correct="no">
+
+      <div id="message"></div>
+
+    </section>
+
+
+  </div>
+
+  <script>
+    function checkAnswer(clickedImg) {
+      if (clickedImg.getAttribute("data-correct") == "yes") {
+        document.querySelector("#message").innerHTML = "✅Bravo!";
+        document.querySelector("#message").style.display = "block";
+        document.querySelector("#message").style.color = "green";
+      } else {
+        document.querySelector("#message").innerHTML = "❌Essai encore";
+        document.querySelector("#message").style.display = "block";
+        document.querySelector("#message").style.color = "red";
+      }
+    }
+  </script>
+</body>
+
+</html>
